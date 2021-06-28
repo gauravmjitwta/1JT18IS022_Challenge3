@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>gaurav_challenge3</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-size: 18px;
+      background: #f4a9a8;
+    }
+
+    header {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      height: 90px;
+      margin: 0;
+ background: #faf1e6;
+      padding-left: 20px;
+    }
+
+    header a {
+      position: relative;
+      display: inline-block;
+      padding: 20px;
+      font-size: 30px;
+      padding-bottom: 66px;
+      text-decoration: none;
+      color: black;
+      text-align: center;
+    }
+
+    header a:hover {
+      color: #ba135d;
+      background-color: #fbc6a4;
+
+    }
+
+    .main {
+      position: relative;
+      margin-left: 1%;
+    }
+
+    .main img {
+
+     margin-left: 3%;
+      height: 300px;
+      width: auto;
+    }
+
+    #demo {
+      position: absolute;
+      margin-left: 60%;
+      padding-bottom: 250px;
+      transform: translate(-50%, -50%);
+    }
+
+    .ending {
+      max-height: 60px;
+      text-align: center;
+      background: #94d0cc;
+    }
+
+    .ending a {
+      position: relative;
+      display: inline-block;
+      padding: 20px;
+      font-size: 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+
+ .ending a:hover {
+      font-size: 30px
+    }
+
+    footer {
+      height: 40px;
+      background: #afb9c8;
+
+    }
+
+    footer p {
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="#home">Home</a>
+    <a href="#places">Places</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#aboutus">AboutUs</a>
+    <a href="#search">Search</a>
+  </header>
+  <br>
+  <section class="main">
+    
+
+<h1>
+      Rock Beach, Pondicherry
+    </h1>
+    <br><br>
+    <img src="ocean.jpg"
+         alt"Rock Beach">
+    <p id="demo"></p>
+    <br>
+    <p>by <a href="#">1jt18is022 Gaurav</a> </p>
+    <br>
+    <p>
+      Rock Beach, often referred to as the Promenade Beach or Pondicherry Beach is a beachfront located along the Bay of Bengal.Unfortunately, this beach is not open for taking dips in the sea or any water sport activities, but many visit the place during sunrise and sunset for walking, jogging or taking a stroll. 
+    </p>
+    <br>
+    <p><i>Year</i> : 2021</p>
+    <p><i>Date</i> : 20th May </p>
+    <br>
+    <br>
+    <h2>Reviews</h2>
+    <br>
+    <p style="font-weight:bold; font-size:20px">We miss alot!! </p>
+
+    <table>
+      <tr>
+        <td> Jhonny</td>
+        <td> ⭐⭐⭐⭐ </td>
+      </tr>
+    </table><br>
+    <p>Awsome experience at this beach.</p>
+    <br>
+    <hr>
+    <br>
+
+    <p style="font-weight:bold; font-size:20px">Love this beach </p>
+    <table>
+      <tr>
+        <td> Meera</td>
+        <td> ⭐⭐⭐⭐⭐ </td>
+      </tr>
+    </table><br>
+    <p>Beautiful beach!!</p>
+    <br>
+    <hr><br>
+
+    <p style="font-weight:bold; font-size:20px">Best Memories</p>
+    <table>
+      <tr>
+
+       <td> Vidya</td>
+        <td> ⭐⭐⭐⭐⭐ </td>
+      </tr>
+    </table><br>
+    <p>One of the best beachs visited till date</p>
+  </section>
+  <br>
+  <section class="ending">
+    <a href="#home">Home</a>
+    <a href="#places">Places</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#aboutus">AboutUs</a>
+    <a href="#search">Search</a>
+  </section>
+
+  <footer>
+    <p><i>Copyright © 2021 Rockbeach</i></p>
+  </footer>
+  <script>
+    var var1 = setInterval(inTimer, 500);
+    var fs = 5; //font size
+    var ids = document.getElementById("demo");
+
+    function inTimer() {
+      ids.innerHTML = 'Beach ';
+      ids.setAttribute('style', "font-size: " + fs + "px; color: #ba135d");
+
+      fs += 5;
+      if (fs >= 50) {
+        clearInterval(var1); //paused
+        var2 = setInterval(deTimer, 500);
+
+      }
+    }
+
+    function deTimer() //fs = 50px
+    {
+      fs -= 5;
+      ids.innerHTML = 'Random Access Memories';
+      ids.setAttribute('style', "font-size: " + fs + "px; color:#e93b81");
+      if (fs == 5) {
+        clearInterval(var2); //paused
+        var1 = setInterval(inTimer, 500);
+      }
+    }
+  </script>
+</body>
+</html>
